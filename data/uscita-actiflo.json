@@ -1,0 +1,54 @@
+{
+  "id": "uscita-actiflo",
+  "name": "Uscita Actiflo",
+  "image": "assets/maps/uscita-actiflo.png?v=8-ocr4-h1759",
+  "width": 3515,
+  "height": 1759,
+  "cropLeft": 456,
+  "area": "sf3",
+  "notes": "Tag catalogo + OCR. Usa Riposiziona per affinare i box.",
+  "tags": [
+    {
+      "id": "LIT109",
+      "label": "LIT109",
+      "kind": "strumento",
+      "x": 0.08,
+      "y": 0.14492325184764074,
+      "w": 0.06,
+      "h": 0.07125639567936327,
+      "source": "catalog"
+    },
+    {
+      "id": "LIT110B",
+      "label": "LIT110B",
+      "kind": "strumento",
+      "x": 0.78,
+      "y": 0.002410460488914161,
+      "w": 0.06,
+      "h": 0.07125639567936327,
+      "source": "catalog"
+    },
+    {
+      "id": "P110A",
+      "label": "P110A",
+      "kind": "pompa",
+      "x": 0.5,
+      "y": 0.002410460488914161,
+      "w": 0.06,
+      "h": 0.07125639567936327,
+      "source": "catalog"
+    },
+    {
+      "id": "P110B",
+      "label": "P110B",
+      "kind": "pompa",
+      "x": 0.64,
+      "y": 0.002410460488914161,
+      "w": 0.06,
+      "h": 0.07125639567936327,
+      "source": "catalog"
+    }
+  ],
+  "seedRev": 8,
+  "cropTop": 330
+}

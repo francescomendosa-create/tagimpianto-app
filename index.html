@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1419" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>Tag Impianto</title>
+  <link rel="manifest" href="./manifest.webmanifest?v=1.8.40" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="stylesheet" href="./css/app.css?v=1.8.40" />
+  <script>
+    /* Niente redirect e niente reload automatici (causavano lampeggio infinito). */
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var nav = document.getElementById("plantNav");
+        var st = document.getElementById("status");
+        if (nav && !nav.children.length && st) {
+          st.innerHTML = 'Avvio non riuscito. <a href="./aggiorna.html" style="color:#22d3a6;font-weight:700">Tocca qui per ripristinare</a>';
+        }
+      }, 8000);
+    });
+  </script>
+</head>
+<body>
+  <div id="updateBanner" class="update-banner" hidden>
+    <span id="updateBannerText">Nuova versione disponibile</span>
+    <button type="button" class="btn primary" id="btnUpdateNow">Aggiorna ora</button>
+  </div>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">TAG <span>IMPIANTO</span> <small id="appVersion" class="app-version" title="Versione app">v1.8.40</small></div>
+      <select id="mapSelect" class="map-select visually-hidden" aria-label="Parte di impianto" tabindex="-1"></select>
+      <div class="map-title" id="mapTitle" aria-live="polite"></div>
+      <div class="top-actions">
+        <button type="button" class="btn update-btn" id="btnRefresh" title="Aggiorna l'app installata (senza reinstallare)">Aggiorna</button>
+        <button type="button" class="btn" id="btnOcr" title="OCR automatico + poi correggi a mano">OCR</button>
+        <button type="button" class="btn" id="btnAnnotate" title="Riposiziona il tag evidenziato">Riposiziona</button>
+        <button type="button" class="btn" id="btnRecalibrate" title="Ridisegna il riquadro giallo del tag selezionato">Ricalibra</button>
+        <button type="button" class="btn" id="btnAddTag" title="Disegna un riquadro sul tag mancante (OCR sulla selezione)">Aggiungi</button>
+        <button type="button" class="btn" id="btnNotes" title="Nota sul tag">Nota</button>
+        <button type="button" class="btn primary" id="btnSync" title="Allinea note e posizioni tra dispositivi (Firebase)">Sync</button>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <div class="search-wrap">
+        <input
+          id="searchInput"
+          type="search"
+          enterkeyhint="search"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          placeholder="Cerca tag... es. P11100A, XV11120, TK-11100B"
+        />
+        <select id="searchKind" class="search-kind" aria-label="Filtra per tipo" title="Filtra per tipo">
+          <option value="tutti" selected>Tutti</option>
+          <option value="pompa">Pompa</option>
+          <option value="valvola">Valvola</option>
+          <option value="serbatoio">Serbatoio</option>
+          <option value="apparecchio">Apparecchio</option>
+          <option value="filtro">Filtro</option>
+          <option value="strumento">Strumento</option>
+          <option value="mixer">Mixer</option>
+          <option value="compressor">Compressore</option>
+          <option value="altro">Altro</option>
+        </select>
+        <button type="button" class="clear-btn" id="clearBtn" aria-label="Pulisci">&times;</button>
+      </div>
+    </div>
+
+    <div id="suggestions" class="suggestions" role="listbox"></div>
+
+    <main class="stage">
+      <aside id="plantNav" class="plant-nav" aria-label="Menu parti impianto"></aside>
+      <div class="stage-main">
+        <div id="viewport" class="viewport">
+          <div id="world" class="world">
+            <img id="mapImage" alt="Mappa impianto" />
+            <div id="overlay" class="overlay"></div>
+          </div>
+        </div>
+
+        <div class="bottom-chrome" aria-live="polite">
+          <div id="status" class="status">Caricamento...</div>
+          <div id="cloudBadge" class="cloud-badge"></div>
+        </div>
+      </div>
+
+      <aside id="drawer" class="drawer" aria-hidden="true">
+        <h2>Tag / nota</h2>
+        <p>Sigla sull'impianto e eventuale nota operativa.</p>
+        <label>
+          Sigla / etichetta
+          <input id="noteTitle" type="text" placeholder="es. P11100A" />
+        </label>
+        <label>
+          Tipo
+          <select id="noteKind">
+            <option value="pompa">Pompa</option>
+            <option value="valvola">Valvola</option>
+            <option value="serbatoio">Serbatoio</option>
+            <option value="apparecchio">Apparecchio</option>
+            <option value="filtro">Filtro</option>
+            <option value="strumento">Strumento</option>
+            <option value="mixer">Mixer</option>
+            <option value="compressor">Compressore</option>
+            <option value="altro">Altro</option>
+          </select>
+        </label>
+        <label>
+          Nota
+          <textarea id="noteBody" placeholder="Appunti, assetto, attenzione..."></textarea>
+        </label>
+        <div class="row">
+          <button type="button" class="btn primary" id="noteSave">Salva</button>
+          <button type="button" class="btn" id="noteDelete">Elimina</button>
+          <button type="button" class="btn" id="noteClose">Chiudi</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="./js/app.js?v=1.8.40"></script>
+</body>
+</html>

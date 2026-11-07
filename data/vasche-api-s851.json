@@ -1,0 +1,183 @@
+{
+  "id": "vasche-api-s851",
+  "name": "S-851 Vasche API",
+  "image": "assets/maps/vasche-api-s851.png?v=7-ocr16-h1657",
+  "width": 3565,
+  "height": 1657,
+  "cropLeft": 463,
+  "area": "vasche-api",
+  "notes": "Tag catalogo + OCR. Usa Riposiziona per affinare i box.",
+  "tags": [
+    {
+      "id": "10AIT14",
+      "label": "10AIT14",
+      "kind": "strumento",
+      "x": 0.5875175315568022,
+      "y": 0.7474351237175618,
+      "w": 0.03927068723702665,
+      "h": 0.028,
+      "confidence": 56.0,
+      "source": "ocr"
+    },
+    {
+      "id": "110AIT14",
+      "label": "110AIT14",
+      "kind": "strumento",
+      "x": 0.725253691939609,
+      "y": 0.3490006745003372,
+      "w": 0.042042735747875586,
+      "h": 0.028,
+      "confidence": 84.0,
+      "source": "ocr"
+    },
+    {
+      "id": "110AIT15",
+      "label": "110AIT15",
+      "kind": "strumento",
+      "x": 0.5877980364656381,
+      "y": 0.7951116475558238,
+      "w": 0.033239831697054696,
+      "h": 0.028,
+      "confidence": 81.0,
+      "source": "ocr"
+    },
+    {
+      "id": "AI_001",
+      "label": "AI_001",
+      "kind": "strumento",
+      "x": 0.5,
+      "y": 0.0023415811707905828,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "LCV-107",
+      "label": "LCV-107",
+      "kind": "valvola",
+      "x": 0.8058,
+      "y": 0.28441762220881117,
+      "w": 0.0522,
+      "h": 0.035630657815328905,
+      "confidence": 89.0,
+      "source": "ocr"
+    },
+    {
+      "id": "LCV-107A",
+      "label": "LCV-107A",
+      "kind": "valvola",
+      "x": 0.8049005857602508,
+      "y": 0.2826511413255707,
+      "w": 0.05425294942661497,
+      "h": 0.028,
+      "confidence": 92.0,
+      "source": "ocr"
+    },
+    {
+      "id": "LCV-31B",
+      "label": "LCV-31B",
+      "kind": "valvola",
+      "x": 0.8082748948106592,
+      "y": 0.1496680748340374,
+      "w": 0.050771388499298735,
+      "h": 0.028,
+      "confidence": 91.0,
+      "source": "ocr"
+    },
+    {
+      "id": "LCV_31A",
+      "label": "LCV_31A",
+      "kind": "valvola",
+      "x": 0.22,
+      "y": 0.14486421243210626,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "LI_851_A",
+      "label": "LI_851_A",
+      "kind": "strumento",
+      "x": 0.78,
+      "y": 0.0023415811707905828,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "LSH-851A",
+      "label": "LSH-851A",
+      "kind": "strumento",
+      "x": 0.08,
+      "y": 0.14486421243210626,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "LT_851",
+      "label": "LT_851",
+      "kind": "strumento",
+      "x": 0.64,
+      "y": 0.0023415811707905828,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "P-13007A",
+      "label": "P-13007A",
+      "kind": "pompa",
+      "x": 0.1016,
+      "y": 0.8561709112854557,
+      "w": 0.0353,
+      "h": 0.035630657815328905,
+      "source": "ocr",
+      "confidence": 76.0
+    },
+    {
+      "id": "P-13007B",
+      "label": "P-13007B",
+      "kind": "pompa",
+      "x": 0.3094,
+      "y": 0.8597339770669886,
+      "w": 0.0339,
+      "h": 0.035630657815328905,
+      "source": "ocr",
+      "confidence": 89.0
+    },
+    {
+      "id": "S-851",
+      "label": "S-851",
+      "kind": "serbatoio",
+      "x": 0.08,
+      "y": 0.0023415811707905828,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "XV001HU",
+      "label": "XV001HU",
+      "kind": "valvola",
+      "x": 0.36,
+      "y": 0.14486421243210626,
+      "w": 0.06,
+      "h": 0.07126131563065781,
+      "source": "catalog"
+    },
+    {
+      "id": "XV_001HU",
+      "label": "XV_001HU",
+      "kind": "valvola",
+      "x": 0.4088936556389737,
+      "y": 0.2059356029678015,
+      "w": 0.041712729972774525,
+      "h": 0.028,
+      "confidence": 76.0,
+      "source": "ocr"
+    }
+  ],
+  "seedRev": 7,
+  "cropTop": 311
+}
