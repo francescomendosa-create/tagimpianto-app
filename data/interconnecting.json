@@ -1,0 +1,153 @@
+{
+  "id": "interconnecting",
+  "name": "Interconnecting",
+  "image": "assets/maps/interconnecting.png?v=7-ocr13-h1537",
+  "width": 3515,
+  "height": 1537,
+  "cropLeft": 456,
+  "area": "interconnecting",
+  "notes": "Tag catalogo + OCR. Usa Riposiziona per affinare i box.",
+  "tags": [
+    {
+      "id": "11FIT200",
+      "label": "11FIT200",
+      "kind": "strumento",
+      "x": 0.4992887624466572,
+      "y": 0.2950553025374105,
+      "w": 0.03399715504978663,
+      "h": 0.028,
+      "confidence": 78.0,
+      "source": "ocr"
+    },
+    {
+      "id": "AIT107A",
+      "label": "AIT107A",
+      "kind": "strumento",
+      "x": 0.22,
+      "y": 0.002602472348731295,
+      "w": 0.06,
+      "h": 0.0712426805465192,
+      "source": "catalog"
+    },
+    {
+      "id": "AIT107C",
+      "label": "AIT107C",
+      "kind": "strumento",
+      "x": 0.36,
+      "y": 0.002602472348731295,
+      "w": 0.06,
+      "h": 0.0712426805465192,
+      "source": "catalog"
+    },
+    {
+      "id": "AIT108B",
+      "label": "AIT108B",
+      "kind": "strumento",
+      "x": 0.7852,
+      "y": 0.05354098893949253,
+      "w": 0.0314,
+      "h": 0.0356213402732596,
+      "confidence": 67.0,
+      "source": "ocr"
+    },
+    {
+      "id": "FCV_1000",
+      "label": "FCV_1000",
+      "kind": "valvola",
+      "x": 0.5,
+      "y": 0.002602472348731295,
+      "w": 0.06,
+      "h": 0.0712426805465192,
+      "source": "catalog"
+    },
+    {
+      "id": "S-829",
+      "label": "S-829",
+      "kind": "serbatoio",
+      "x": 0.08,
+      "y": 0.002602472348731295,
+      "w": 0.06,
+      "h": 0.0712426805465192,
+      "source": "catalog"
+    },
+    {
+      "id": "XV_829",
+      "label": "XV_829",
+      "kind": "valvola",
+      "x": 0.9061166429587483,
+      "y": 0.75113858165257,
+      "w": 0.032290184921763866,
+      "h": 0.028,
+      "confidence": 92.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_831",
+      "label": "XV_831",
+      "kind": "valvola",
+      "x": 0.3763869132290185,
+      "y": 0.3280263308967048,
+      "w": 0.03008953225671492,
+      "h": 0.028,
+      "confidence": 91.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_832",
+      "label": "XV_832",
+      "kind": "valvola",
+      "x": 0.46372688477951635,
+      "y": 0.4121665582303188,
+      "w": 0.031152204836415363,
+      "h": 0.028,
+      "confidence": 90.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_833",
+      "label": "XV_833",
+      "kind": "valvola",
+      "x": 0.2975650573173793,
+      "y": 0.12556929082628496,
+      "w": 0.03142833235712492,
+      "h": 0.03398522714225573,
+      "confidence": 82.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_834",
+      "label": "XV_834",
+      "kind": "valvola",
+      "x": 0.29615931721194877,
+      "y": 0.06148340923877684,
+      "w": 0.032005689900426744,
+      "h": 0.028952504879635653,
+      "confidence": 90.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_835",
+      "label": "XV_835",
+      "kind": "valvola",
+      "x": 0.11113714333528577,
+      "y": 0.7580083432201767,
+      "w": 0.03008953225671492,
+      "h": 0.028,
+      "confidence": 90.0,
+      "source": "ocr"
+    },
+    {
+      "id": "XV_836",
+      "label": "XV_836",
+      "kind": "valvola",
+      "x": 0.4176888963266672,
+      "y": 0.8575146389069617,
+      "w": 0.02975483223161242,
+      "h": 0.028,
+      "confidence": 75.0,
+      "source": "ocr"
+    }
+  ],
+  "seedRev": 7,
+  "cropTop": 288
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Aggiorna Tag Impianto</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f1419; color: #e8eef5; padding: 24px; line-height: 1.45; }
+    a { color: #22d3a6; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <p>Aggiornamento dell?app <strong>gi? installata</strong> (non serve reinstallare)?</p>
+  <p id="msg">Pulizia cache?</p>
+  <script>
+    (async function () {
+      var msg = document.getElementById("msg");
+      function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+      async function readVer() {
+        try {
+          var r = await fetch("./version.json?_=" + Date.now(), { cache: "no-store" });
+          if (r.ok) {
+            var j = await r.json();
+            if (j && j.version) return String(j.version);
+          }
+        } catch (e) {}
+        try {
+          var vr = await fetch("./js/version.js?_=" + Date.now(), { cache: "no-store" });
+          var vt = await vr.text();
+          var m = /APP_VERSION\s*=\s*"([^"]+)"/.exec(vt);
+          if (m) return m[1];
+        } catch (e) {}
+        return "?";
+      }
+      try {
+        try { localStorage.setItem("ti-force-seed", "1"); } catch (e) {}
+        try { localStorage.removeItem("ti-force-images"); } catch (e) {}
+        if ("serviceWorker" in navigator) {
+          var regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(function (r) { return r.unregister(); }));
+        }
+        if (window.caches) {
+          var keys = await caches.keys();
+          await Promise.all(keys.map(function (k) { return caches.delete(k); }));
+        }
+      } catch (e) {}
+      var first = await readVer();
+      var target = first;
+      msg.textContent = "Versione online: v" + first + " ? attendo pubblicazione?";
+      for (var i = 0; i < 24; i++) {
+        await sleep(5000);
+        target = await readVer();
+        msg.textContent = "Versione online: v" + target + " (" + (i + 1) + "/24)?";
+        if (target !== "?" && target !== first) break;
+        // se gi? nuova rispetto a ci? che avevamo in query, ok
+        if (target !== "?" && i >= 1) break;
+      }
+      msg.textContent = "Ok. Ricarico l?app v" + target + "?";
+      setTimeout(function () {
+        location.replace("./index.html?_ver=" + encodeURIComponent(target) + "&_ts=" + Date.now());
+      }, 300);
+    })();
+  </script>
+</body>
+</html>

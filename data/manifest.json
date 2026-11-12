@@ -1,0 +1,31 @@
+{
+  "cropLeft": 108,
+  "maps": [
+    "./data/actiflo.json",
+    "./data/assetto-200.json",
+    "./data/biologico-mbbr-123.json",
+    "./data/chimico-fisico.json",
+    "./data/filtrazione-carboni.json",
+    "./data/holdup-area-nord.json",
+    "./data/holdup-pgs-ovest.json",
+    "./data/interconnecting.json",
+    "./data/osmosi-1a.json",
+    "./data/osmosi-1b.json",
+    "./data/osmosi-1c.json",
+    "./data/osmosi-2a.json",
+    "./data/osmosi-2b.json",
+    "./data/osmosi-2c.json",
+    "./data/reattivi-actiflo.json",
+    "./data/sediflottatore-b.json",
+    "./data/sediflottazione-a.json",
+    "./data/trattamento-fanghi.json",
+    "./data/ultrafiltrazione.json",
+    "./data/ultrafiltrazione-a.json",
+    "./data/ultrafiltrazione-b.json",
+    "./data/ultrafiltrazione-c.json",
+    "./data/ultrafiltrazione-mbr-ad.json",
+    "./data/ultrafiltrazione-mbr-eh.json",
+    "./data/uscita-actiflo.json",
+    "./data/vasche-api-s851.json"
+  ]
+}
